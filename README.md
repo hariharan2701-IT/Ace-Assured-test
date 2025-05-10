@@ -17,32 +17,11 @@ HTML
 
 CSS
 
-JavaScript (Vanilla)
+JavaScript
 
 TMDB API
 
 🚀 Getting Started
-Clone this repository:
 
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/movie-tv-explorer.git
-Navigate into the project:
 
-bash
-Copy
-Edit
-cd folder
-Open script.js and replace the placeholder with your TMDB API key:
 
-js
-Copy
-Edit
-const API_KEY = 'YOUR_TMDB_API_KEY';// your api
-Open index.html in a browser:
-
-bash
-Copy
-Edit
-open index.html
