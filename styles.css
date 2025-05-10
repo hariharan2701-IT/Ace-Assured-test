@@ -167,5 +167,9 @@ body {
       flex-direction: column;
       align-items: stretch;
     }
+  
+    .results-grid {
+      grid-template-columns: repeat(2, 1fr); /* Force 2 columns on mobile */
+    }
   }
   
