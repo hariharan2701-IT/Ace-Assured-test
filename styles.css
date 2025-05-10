@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f0f0f;
+    color: #fff;
+    min-height: 100vh;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #00e1ff;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    animation: slideInDown 0.6s ease-out;
+  }
+  
+  /* Search Bar Area */
+  .search-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
+    animation: fadeIn 0.8s ease-in;
+  }
+  
+  .search-section input,
+  .search-section select {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: box-shadow 0.3s ease;
+    outline: none;
+  }
+  
+  .search-section input:focus,
+  .search-section select:focus {
+    box-shadow: 0 0 8px 2px #00e1ff80;
+  }
+  
+  .search-section button {
+    background-color: #00e1ff;
+    color: black;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .search-section button:hover {
+    background-color: #00bcd4;
+    transform: scale(1.05);
+  }
+  
+  /* Movie Cards Grid */
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    animation: fadeInUp 0.8s ease-in;
+  }
+  
+  /* Card Style */
+  .card {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 225, 255, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 225, 255, 0.3);
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.4s ease;
+  }
+  
+  .card:hover img {
+    transform: scale(1.05);
+  }
+  
+  .card-content {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .card-title {
+    font-size: 17px;
+    font-weight: bold;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .card-meta {
+    font-size: 14px;
+    color: #aaa;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInDown {
+    from {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Mobile Responsiveness */
+  @media screen and (max-width: 600px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    .search-section input,
+    .search-section select {
+      width: 100%;
+    }
+  
+    .search-section {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+  
